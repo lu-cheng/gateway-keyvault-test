@@ -1,0 +1,23 @@
+server:
+  port: 8888
+azure:
+  keyvault:
+    enabled: true
+    refresh-interval: 60000
+    uri:
+    client-id:
+    client-key:
+    tenant-id:
+spring:
+  application:
+    name: Gateway
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+    gateway:
+      routes:
+        - id: test
+          uri: lb://TestWeb
+          predicates:
+            - After=2017-01-20T17:42:47.789-07:00[America/Denver]
