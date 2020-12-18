@@ -8,6 +8,11 @@ azure:
     client-id:
     client-key:
     tenant-id:
+  cosmosdb:
+    uri:
+    key:
+    database: SampleDB
+    allow-telemetry: true
 spring:
   application:
     name: Gateway
